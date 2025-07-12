@@ -1,6 +1,6 @@
 # qaidjacobs.com
 
-A Jekyll-powered portfolio website for Qa'id Jacobs, replacing the previous Squarespace site with a GitHub Pages compatible version.
+A Jekyll-powered portfolio website for Qa'id Jacobs.
 
 ## Development Setup
 
@@ -58,4 +58,4 @@ This site is configured for GitHub Pages deployment. Simply push to the main bra
 
 ---
 
-© 2024 Qa'id Jacobs
+© 2025 Qa'id Jacobs

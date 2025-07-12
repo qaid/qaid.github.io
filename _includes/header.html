@@ -11,14 +11,21 @@
             <!-- Navigation -->
             <nav class="main-navigation" id="main-nav">
                 <ul class="nav-list">
-                    {% for item in site.navigation %}
                     <li class="nav-item">
-                        <a href="{{ item.url | relative_url }}" 
-                           class="nav-link {% if page.url == item.url %}active{% endif %}">
-                            {{ item.title }}
-                        </a>
+                        <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a>
                     </li>
-                    {% endfor %}
+                    <li class="nav-item">
+                        <a href="{{ '/work/' | relative_url }}" class="nav-link{% if page.url contains '/work' %} active{% endif %}">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ '/about/' | relative_url }}" class="nav-link{% if page.url == '/about/' %} active{% endif %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ '/publicly/' | relative_url }}" class="nav-link{% if page.url == '/publicly/' %} active{% endif %}">Publicly</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ '/contact/' | relative_url }}" class="nav-link{% if page.url == '/contact/' %} active{% endif %}">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </div>
