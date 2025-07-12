@@ -1,25 +1,23 @@
 source "https://rubygems.org"
 
-# Use latest Jekyll version
-gem "jekyll", "~> 4.4"
+# GitHub Pages
+gem "github-pages", group: :jekyll_plugins
 
-# Jekyll plugins
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-sitemap"
-  gem "jekyll-seo-tag"
-  gem "jekyll-sass-converter"
-end
+# Jekyll plugins (included in github-pages but specified for clarity)
+gem "jekyll-feed", "~> 0.12"
+gem "jekyll-sitemap"
+gem "jekyll-seo-tag"
 
 # Required for Jekyll 4.x
-gem "webrick", "~> 1.9"
+gem "webrick", "~> 1.7"
 
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
-platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", "~> 1.2"
-  gem "tzinfo-data"
+# Development dependencies
+group :development do
+  gem "listen", "~> 3.0"
 end
+
+# Windows and JRuby does not include zoneinfo files
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
