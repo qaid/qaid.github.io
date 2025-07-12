@@ -1,0 +1,59 @@
+# Site settings
+title: "Qa'id Jacobs - Designer & Creative Director"
+description: "The portfolio website of designer Qa'id Jacobs, featuring examples of his product and user experience (UX) design work."
+baseurl: ""
+url: "https://qaidjacobs.com"
+author: "Qa'id Jacobs"
+email: "qaid@constellation.design"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  work:
+    output: true
+    permalink: /work/:name/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - PLANNING_DOCUMENT.md
+  - README.md
+
+# SEO settings
+twitter:
+  username: qaidjacobs
+  card: summary_large_image
+
+social:
+  name: Qa'id Jacobs
+  links:
+    - https://twitter.com/qaidjacobs
+    - https://linkedin.com/in/qaidjacobs
+
+# Site navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Work"
+    url: "/work/"
+  - title: "About"
+    url: "/about/"
+  - title: "Publicly"
+    url: "/publicly/"
+  - title: "Contact"
+    url: "/contact/"

@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<div class="case-study-container">
+    <header class="case-study-header">
+        <h1 class="case-study-title">{{ page.title }}</h1>
+        {% if page.subtitle %}
+        <p class="case-study-subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+        
+        {% if page.project_info %}
+        <div class="project-info">
+            {% if page.project_info.client %}
+            <div class="info-item">
+                <strong>Client:</strong> {{ page.project_info.client }}
+            </div>
+            {% endif %}
+            {% if page.project_info.role %}
+            <div class="info-item">
+                <strong>Role:</strong> {{ page.project_info.role }}
+            </div>
+            {% endif %}
+            {% if page.project_info.timeline %}
+            <div class="info-item">
+                <strong>Timeline:</strong> {{ page.project_info.timeline }}
+            </div>
+            {% endif %}
+            {% if page.project_info.skills %}
+            <div class="info-item">
+                <strong>Skills:</strong> {{ page.project_info.skills | join: ', ' }}
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </header>
+    
+    <div class="case-study-content">
+        {{ content }}
+    </div>
+    
+    {% if page.next_project %}
+    <footer class="case-study-footer">
+        <a href="{{ page.next_project.url }}" class="next-project-link">
+            <span class="next-label">Next</span>
+            <span class="next-title">{{ page.next_project.title }}</span>
+        </a>
+    </footer>
+    {% endif %}
+</div>
